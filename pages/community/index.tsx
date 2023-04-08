@@ -4,15 +4,15 @@ const Community: NextPage = () => {
     return (
         <div className="py-16 space-y-8 px-4">
           <div className="flex flex-col items-start">
-            <span className="flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+            <span className="flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 ">
                 Alle Fragen
             </span>
-            <div className="mt-2 text-gray-700">
+            <div className="mt-4 text-gray-700">
               <span className="text-orange-500 font-medium">
                 Q.</span> Wo ist der berühmteste Friseur in Frankfurt?
             </div>
             <div className="mt-5 flex items-center justify-end w-full font-medium text-xs">
-              <span className="text-gray-900 pr-2">{`ID: ${"Lee" /*userName */}`}</span>
+              <span className="text-gray-900 pr-2">{`ID: ${"Lee" /*userName */}`} 🇰🇷</span>
               <span className="text-gray-500">18h</span>
             </div>
             <div className="flex space-x-5 mt-3 text-gray-700 py-2.5 border-t border-b-[1.5px] w-full">
