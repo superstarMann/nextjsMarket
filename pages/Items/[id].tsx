@@ -4,9 +4,9 @@ import type { NextPage } from "next";
 const ItemDetail: NextPage = () => {
   return (
    <Layout title="" canGoBack>
-     <div className="px-5 py-10">
+     <div className="px-5 py-1">
       <div className="mb-8">
-        <div className="h-96 bg-slate-300">face</div>
+        <div className="h-96 rounded-lg bg-slate-300 flex justify-center items-center text-2xl">face</div>
         <div className="py-3 border-b flex items-center space-x-3">
           <div className="w-12 h-12 bg-slate-300 rounded-full"/>
           <div>
@@ -15,23 +15,18 @@ const ItemDetail: NextPage = () => {
           </div>
         </div>
         <div className="mt-5">
-          <h1 className="text-3xl font-bold text-gray-900">Galaxy S50 미용실 이름</h1>
-          <span className="text-3xl mt-3 text-gray-900">$140 주소를 적자</span>
-          <p className="my-6 text-gray-700">
-            My money&apos;s in that office, right? If she start giving me some
-            bullshit about it ain&apos;t there, and we got to go someplace else
-            and get it, I&apos;m gonna shoot you in the head then and there.
-            Then I&apos;m gonna shoot that bitch in the kneecaps, find out where
-            my goddamn money is. She gonna tell me too. Hey, look at me when
-            I&apos;m talking to you, motherfucker. You listen: we go in there,
-            and that ni**a Winston or anybody else is in there, you the first
-            motherfucker to get shot. You understand?
-
-            <br/>이쪽 부분은 미용실 소개
+          <h1 className="text-3xl font-bold text-gray-900">Beauty Hairshop</h1>
+          <span className="text-base text-gray-600">Berliner Straße Ass</span>
+          <p className="text-sm text-gray-900 mt-1">$90</p>
+          <p className="my-5 text-gray-700 border-2 border-gray-400 rounded-lg px-2 py-2 border-dotted text-sm">
+          Türkischer Haare<br/>
+          Schwarze Haare<br/>
+          Weiße Haare<br/>
+          Chinesische Haare
           </p>
           <div className="flex items-center justify-between">
             <button className="flex-1 space-x-2 bg-orange-500 text-white py-3 rounded-md font-medium focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-orange-500">
-              Talk to seller 예약&문의하기
+              Buchen & Talk
               </button>
             <button className='ml-2 rounded-md p-3 flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 '>
               <svg
@@ -54,13 +49,13 @@ const ItemDetail: NextPage = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Similar items</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Similar Shops</h2>
         <div className="grid grid-cols-2 gap-4 mt-6">
           {[1, 2, 3, 4, 5, 6].map((_, i) => (
             <div key={i}>
               <div className="h-56 w-full mb-2 bg-slate-300 "/>
-              <h3 className="text-sm text-gray-700 -mb-1">Galaxy S60</h3>
-              <span className="text-xs font-medium text-gray-900">$6</span>
+              <h3 className="text-sm text-gray-700 -mb-1">Hübsch Haare</h3>
+              <span className="text-xs font-medium text-gray-900">$60</span>
             </div>
           ))}
         </div>

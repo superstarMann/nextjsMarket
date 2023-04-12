@@ -1,7 +1,6 @@
 import Layout from "@/components/layout";
 import { NextPage } from "next";
 
-
 const Home: NextPage = () => {
     return (
       <Layout title="Home" hasTabBar>
@@ -11,7 +10,7 @@ const Home: NextPage = () => {
             <div className="flex space-x-3">
               <div className="w-20 h-20 bg-slate-500 rounded-lg" />
               <div className="pt-1 flex flex-col">
-                <h3 className="text-sm font-medium text-gray-500">Hair Shop 🇩🇪</h3>
+                <h3 className="text-sm font-medium text-gray-500">Hair Shop 🇩🇪🇰🇷</h3>
                 <span className="text-gray-900 mt-1 text-sm">14:00 ~ 15:00</span> 
                 <span className="font-medium text-gray-900">$95</span>
               </div>
