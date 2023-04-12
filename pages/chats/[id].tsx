@@ -6,13 +6,13 @@ const ChatDetail: NextPage = () => {
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-full bg-slate-400"/>
           <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-400 rounded-md">
-            <p>wie viel kostet ein Haarschnitt bei Ihnen?</p>
+            <p>Haben Sie schon einmal asiatische Haare geschnitten?</p>
           </div>
         </div>
         <div className="flex flex-row-reverse items-center space-x-2 space-x-reverse">
           <div className="w-8 h-8 rounded-full bg-slate-400" />
           <div className="w-1/2 text-sm text-gray-700 p-2 border border-gray-400 rounded-md">
-            <p>ein Männerhaarschnitt kostet 15 Euro, ein Frauenhaarschnitt kostet 30-300 Euro</p>
+            <p>Ich schneide nur deutsche Haare</p>
             </div>
         </div>
         <div className="flex items-center space-x-2">

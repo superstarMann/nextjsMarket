@@ -1,10 +1,12 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 
 const ItemDetail: NextPage = () => {
   return (
-    <div className="px-5 py-10">
+   <Layout title="" canGoBack>
+     <div className="px-5 py-10">
       <div className="mb-8">
-        <div className="h-96 bg-slate-300"/>
+        <div className="h-96 bg-slate-300">face</div>
         <div className="py-3 border-b flex items-center space-x-3">
           <div className="w-12 h-12 bg-slate-300 rounded-full"/>
           <div>
@@ -64,6 +66,7 @@ const ItemDetail: NextPage = () => {
         </div>
       </div>
     </div>
+   </Layout>
   );
 };
 

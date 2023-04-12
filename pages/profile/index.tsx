@@ -1,18 +1,20 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 
 const Profile: NextPage = () => {
   return (
-    <div className="py-10 px-4">
-      <div>
-        <div />
-        <div>
-          <span>Steve Jebs</span>
-          <span>Edit profile &rarr;</span>
+    <Layout title="Profile" hasTabBar>
+      <div className="py-2 px-4">
+      <div className="flex items-center space-x-3">
+        <div className="w-16 h-16 bg-slate-500 rounded-full" />
+        <div className="flex flex-col">
+          <span className="font-medium text-gray-900" >Steve Jeb</span>
+          <span className="text-sm text-gray-700" >Edit profile &rarr;</span>
         </div>
       </div>
-      <div>
-        <div>
-          <div>
+      <div className="mt-10 flex justify-around">
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -28,10 +30,10 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span>판매내역</span>
+          <span className="mt-2 text-sm font-medium text-gray-700">Verkaufen</span>
         </div>
-        <div>
-          <div>
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -47,10 +49,10 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span>구매내역</span>
+          <span className="mt-2 text-sm font-medium text-gray-700">Bestellung</span>
         </div>
-        <div>
-          <div>
+        <div className="flex flex-col items-center">
+          <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -66,15 +68,15 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span>관심목록</span>
+          <span className="mt-2 text-sm font-medium text-gray-700">Interessen</span>
         </div>
       </div>
-      <div>
-        <div>
-          <div />
+      <div className="mt-10 border-t-2 border-orange-400 pt-3">
+        <div className="flex items-center space-x-4">
+          <div className="w-8 h-8 rounded-full bg-gray-600 "/>
           <div>
-            <h4>니꼬</h4>
-            <div>
+            <h4 className="text-sm font-bold text-gray-600">Seung Hun Lee 🇰🇷</h4>
+            <div className="flex items-center">
               <svg
                 className="text-yellow-400 h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,18 +125,14 @@ const Profile: NextPage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="mt-4 text-gray-600 text-sm border-2 border-gray-300 rounded-lg px-4 py-3">
           <p>
-            Normally, both your asses would be dead as fucking fried chicken,
-            but you happen to pull this shit while I&apos;m in a transitional
-            period so I don&apos;t wanna kill you, I wanna help you. But I
-            can&apos;t give you this case, it don&apos;t belong to me. Besides,
-            I&apos;ve already been through too much shit this morning over this
-            case to hand it over to your dumb ass.
+          Er hat ein hohes Verständnis für asiatisches Haar. Ich war sehr zufrieden und werde wieder kommen.👍
           </p>
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

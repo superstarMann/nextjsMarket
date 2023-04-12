@@ -1,8 +1,10 @@
+import Layout from "@/components/layout";
 import { NextPage } from "next";
 
 const Community: NextPage = () => {
     return (
-        <div className="py-16 space-y-8 px-4">
+        <Layout title="Q&A" hasTabBar>
+          <div className="py-2 space-y-8 px-4">
           <div className="flex flex-col items-start">
             <span className="flex px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 ">
                 Alle Fragen
@@ -52,14 +54,14 @@ const Community: NextPage = () => {
               </span>
             </div>
           </div>
-          <button className="fixed bottom-16 text-white right-5 bg-orange-400 rounded-full p-4">
+          <button className="fixed bottom-24 text-white right-5 bg-orange-400 rounded-full p-4">
             <svg
-              className="w-6 h-6"
+              className="h-4 w-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-            >
+              >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -69,6 +71,7 @@ const Community: NextPage = () => {
             </svg>
           </button>
         </div>
+        </Layout>
       );
     };
 
