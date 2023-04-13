@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Profile: NextPage = () => {
   return (
@@ -9,11 +10,14 @@ const Profile: NextPage = () => {
         <div className="w-16 h-16 bg-slate-500 rounded-full" />
         <div className="flex flex-col">
           <span className="font-medium text-gray-900" >Steve Jeb</span>
-          <span className="text-sm text-gray-700" >Edit profile &rarr;</span>
+          <Link href="/profile/edit" legacyBehavior>
+              <a className="text-sm text-gray-700">Edit profile &rarr;</a>
+            </Link>
         </div>
       </div>
       <div className="mt-10 flex justify-around">
-        <div className="flex flex-col items-center">
+        <Link href={'/profile/bought'} legacyBehavior>
+        <div className="flex flex-col items-center cursor-pointer">
           <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
@@ -32,7 +36,9 @@ const Profile: NextPage = () => {
           </div>
           <span className="mt-2 text-sm font-medium text-gray-700">Verkaufen</span>
         </div>
-        <div className="flex flex-col items-center">
+        </Link>
+        <Link href={'/profile/sold'} legacyBehavior>
+        <div className="flex flex-col items-center cursor-pointer">
           <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
@@ -51,7 +57,9 @@ const Profile: NextPage = () => {
           </div>
           <span className="mt-2 text-sm font-medium text-gray-700">Bestellung</span>
         </div>
-        <div className="flex flex-col items-center">
+        </Link>
+        <Link href={'/profile/loved'}>
+        <div className="flex flex-col items-center cursor-pointer">
           <div className="w-14 h-14 text-white bg-orange-500 rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6"
@@ -70,6 +78,7 @@ const Profile: NextPage = () => {
           </div>
           <span className="mt-2 text-sm font-medium text-gray-700">Interessen</span>
         </div>
+        </Link>
       </div>
       <div className="mt-10 border-t-2 border-orange-400 pt-3">
         <div className="flex items-center space-x-4">

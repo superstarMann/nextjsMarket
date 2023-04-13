@@ -1,8 +1,10 @@
+import Layout from "@/components/layout";
+import TextArea from "@/components/textarea";
 import type { NextPage } from "next";
 
 const CommunityPostDetail: NextPage = () => {
   return (
-    <div>
+    <Layout canGoBack>
       <span className="inline-flex my-3 ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
       Alle Fragen
       </span>
@@ -16,7 +18,7 @@ const CommunityPostDetail: NextPage = () => {
         </div>
       </div>
       <div>
-        <div className="mt-2 px-4 text-gray-700">
+        <div className="mt-2 py-2 px-4 text-gray-700">
           <span className="text-orange-500 font-medium">Q.</span> Wo ist der berühmteste Friseur in Frankfurt?
         </div>
         <div className="flex px-4 space-x-5 mt-3 text-gray-700 py-2.5 border-t border-b-[2px]  w-full">
@@ -70,17 +72,16 @@ const CommunityPostDetail: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="px-4">
-        <textarea
-          className="mt-1 shadow-sm w-full focus:ring-orange-500 rounded-md border-gray-300 focus:border-orange-500 "
-          rows={4}
-          placeholder="Antworte diese Frage!"
+      <div className="px-4 fixed bottom-4 w-full ">
+        <TextArea name="description"
+                  placeholder="Antworte diese Frage!"
+                  required
         />
         <button className="mt-2 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">
           Rückantwort
         </button>
       </div>
-    </div>
+    </Layout>
   );
 };
 

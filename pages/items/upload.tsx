@@ -1,8 +1,13 @@
+import Button from "@/components/button";
+import Input from "@/components/input";
+import Layout from "@/components/layout";
+import TextArea from "@/components/textarea";
 import type { NextPage } from "next";
 
 const Upload: NextPage = () => {
   return (
-    <div className="px-4 py-16">
+    <Layout canGoBack title="Upload Product">
+      <form className="p-4 space-y-4">
       <div> 
           <label className="w-full flex items-center text-gray-600 hover:text-orange-500 hover:border-orange-500 justify-center border-2 border-dashed border-gray-300 h-56 rounded-xl">
             <svg
@@ -22,7 +27,29 @@ const Upload: NextPage = () => {
             <input type="file" className="hidden" />
           </label>
       </div>
-      <div className="my-5">
+      <Input required 
+             label="Name" 
+             name="name" 
+             type="text"/>
+      <Input required
+             label="Price"
+             placeholder="0.00"
+             name="price"
+             type="text"
+             kind="price"
+            />
+            <TextArea name="description" label="Description"  />
+            <Button text="Upload"/>
+      </form>
+    </Layout>
+  );
+};
+
+export default Upload;
+
+/*
+
+ <div className="my-5">
         <label className="mb-1 block text-sm font-medium text-gray-700" 
                htmlFor="price">Price
         </label>
@@ -45,8 +72,6 @@ const Upload: NextPage = () => {
           <textarea rows={4} className='mt-1 shadow-sm w-full focus:ring-orange-500 rounded-md border-gray-300 focus:border-orange-500' />
       </div>
       <button className="mt-3 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">Upload product</button>
-    </div>
-  );
-};
+    
 
-export default Upload;
+      */

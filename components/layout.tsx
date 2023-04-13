@@ -24,6 +24,7 @@ export default function Layout({
                 <button onClick={onClick}>&larr;</button>
                 : null }
                 {title ? <span>{title}</span>: null}
+                <div>{""}</div>
             </div>
             <div className="py-16">{children}</div>
             {hasTabBar ?(
