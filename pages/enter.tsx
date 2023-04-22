@@ -1,13 +1,26 @@
 import Button from "@/components/button";
 import Input from "@/components/input";
+import useMutation from "@/libs/server/useMutation";
 import { NextPage } from "next";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+interface EnterForm{
+  email?: string;
+  phone?: string;
+}
 
 const Enter: NextPage = () => {
-  
+  const [enter, {loading, data, error}] = useMutation("/api/users/enter")
+  const {register, handleSubmit} = useForm<EnterForm>()
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
+  const onValid = (validForm:EnterForm) => {
+    enter(validForm);
+  }
+  console.log(loading, data, error);
+
   return (
     <div className="mt-10 lg:px-10 sm: px-4">
       <h3 className="text-2xl text-center font-bold">Welcome to Carrot</h3>
@@ -22,17 +35,21 @@ const Enter: NextPage = () => {
             onClick={onPhoneClick}>Phone Number</button>
           </div>
         </div>
-        <form className="flex flex-col mt-4 space-y-4">
+        <form 
+        onSubmit={handleSubmit(onValid)}
+        className="flex flex-col mt-4 space-y-4">
           {method === "email" ? (
-            <Input name="email"
+            <Input register={register("email", {required: true})}
+                   name="email"
                    label="Email Address" 
-                   type="email" requierd/>
+                   type="email" />
           ) : null}
           {method === "phone" ? (
-            <Input name="phone"
+            <Input register={register("phone", {required: true})}
+                   name="phone"
                    label="Phone Number"
                    kind="phone"
-                   requierd
+                   type="phone"
             />
           ) : null}
           {method === 'email' ? <Button text={"Get Login Link"}/> : null}
